@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour {
 		if (raycastHit.collider != null) 
 		{
 			//Debug.Log(raycastHit.collider.tag);
-			if (Input.GetButtonDown ("JUMP"))
+			if (Input.GetButtonDown ("JUMP") || Input.GetKeyDown(KeyCode.UpArrow))
 			{
 				this.rigidbody2D.AddForce(Vector2.up * jumpForce); 
 			}
@@ -30,8 +30,20 @@ public class Movement : MonoBehaviour {
 
 		if (rigidbody2D.velocity.x < 10.0f && rigidbody2D.velocity.x > -10.0f)
 		{
+			if (Input.GetKey(KeyCode.LeftArrow))
+			{
+				rigidbody2D.AddForce(Vector2.right * -10.0f);
+			}
+
+			if (Input.GetKey(KeyCode.RightArrow))
+			{
+				rigidbody2D.AddForce(Vector2.right * 10.0f);
+			}
+
 			rigidbody2D.AddForce(Vector2.right * Input.GetAxisRaw ("Move_X") * 10);
 		}
+
+
 
 		Debug.DrawRay ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.5f), raycastDirection * 0.05f, Color.red);
 
