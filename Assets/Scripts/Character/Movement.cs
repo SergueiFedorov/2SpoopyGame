@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour {
 		raycastHit = Physics2D.Raycast ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.55f), raycastDirection, 0.05f);
 		if (raycastHit.collider != null) 
 		{
-			Debug.Log(raycastHit.collider.tag);
+			//Debug.Log(raycastHit.collider.tag);
 			if (Input.GetButtonDown ("JUMP"))
 			{
 				this.rigidbody2D.AddForce(Vector2.up * jumpForce); 
@@ -32,7 +32,6 @@ public class Movement : MonoBehaviour {
 		{
 			rigidbody2D.AddForce(Vector2.right * Input.GetAxisRaw ("Move_X") * 10);
 		}
-
 
 		Debug.DrawRay ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.5f), raycastDirection * 0.05f, Color.red);
 

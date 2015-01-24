@@ -5,18 +5,18 @@ using System.Collections.Generic;
 
 public class NeedsController : MonoBehaviour {
 
-	Dictionary<KeyCode, VictimNeeds> needBindings = new Dictionary<KeyCode, VictimNeeds>();
+	Dictionary<KeyCode, ItemTypes> needBindings = new Dictionary<KeyCode, ItemTypes>();
 
 	DistanceToVictims distancesToVictims;
 
-	VictimNeeds currentNeedBeingAsked;
+	ItemTypes currentNeedBeingAsked;
 
 	// Use this for initialization
 	void Start () {
-		needBindings.Add (KeyCode.A, VictimNeeds.Build);
-		needBindings.Add (KeyCode.S, VictimNeeds.Hunger);
-		needBindings.Add (KeyCode.D, VictimNeeds.Sick);
-		needBindings.Add (KeyCode.F, VictimNeeds.Thirst);
+		needBindings.Add (KeyCode.A, ItemTypes.Food);
+		needBindings.Add (KeyCode.S, ItemTypes.Medicine);
+		needBindings.Add (KeyCode.D, ItemTypes.Tools);
+		needBindings.Add (KeyCode.F, ItemTypes.Water);
 
 		distancesToVictims = this.GetComponent<DistanceToVictims> ();
 	}
@@ -26,13 +26,11 @@ public class NeedsController : MonoBehaviour {
 
 		Victim victim = distancesToVictims.GetClosestVictim ();
 
-		//Debug.Log (victim);
-
 		if (victim != null)
 		{
-			foreach (KeyValuePair<KeyCode, VictimNeeds> binding in needBindings) 
+			foreach (KeyValuePair<KeyCode, ItemTypes> binding in needBindings) 
 			{
-				currentNeedBeingAsked = VictimNeeds.None;
+				currentNeedBeingAsked = ItemTypes.None;
 				if (Input.GetKeyDown(binding.Key))
 				{
 					currentNeedBeingAsked = binding.Value;
@@ -40,21 +38,17 @@ public class NeedsController : MonoBehaviour {
 				}
 			}
 
-			if (currentNeedBeingAsked != VictimNeeds.None)
+			if (currentNeedBeingAsked != ItemTypes.None)
 			{
-
-				if (victim.need == currentNeedBeingAsked)
+				if (victim.TryGesture(currentNeedBeingAsked))
 				{
-					Debug.Log("yes");
+					victim.SetGestureSucceeded();
 				}
 				else
 				{
-					Debug.Log("No");
+					victim.GesureFailed();
 				}
-
 			}
-
-
 		}
 
 	}

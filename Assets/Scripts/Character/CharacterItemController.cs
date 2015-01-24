@@ -16,45 +16,20 @@ public class CharacterItemController : MonoBehaviour {
 	void Update () {
 
 		Victim victim = distancesToVictims.GetClosestVictim ();
-	
+
 		if (victim != null)
 		{
-			if (Input.GetKey(KeyCode.Alpha1) && items.Count > 0)
+			if (Input.GetKeyDown(KeyCode.Alpha1) && items.Count > 0)
 			{
-				ItemTypes selectedType = items[0];
-				items.RemoveAt(0);
-
-				ItemTypes itemToTradeIn = victim.itemType;
-
-				victim.itemType = selectedType;
-				items.Add(itemToTradeIn);
-
+				if (victim.CanTrade(items[0]))
+				{
+					ItemTypes returnedItem = victim.DoTrade(items[0]);
+					items.RemoveAt(0);
+					items.Add(returnedItem);
+				}
+		
 			}
 		}
-		//float axisValue = Input.GetAxisRaw ("Move_X");
-
-		//Debug.Log ("Value: " + axisValue);
-
-		/*
-		foreach (string name in Input.GetJoystickNames ())
-		{
-			Debug.Log(name);
-		}*/
-
-		/*
-		string output = "ME: ";
-		Debug.ClearDeveloperConsole ();
-		foreach (ItemTypes item in items)
-		{
-			output += item.ToString() + " ";
-		}
-
-		Debug.Log (output);
-
-		if (victim != null)
-		{
-			Debug.Log ("VICTIM: " + victim.itemType);
-		}*/
 
 	}
 }
