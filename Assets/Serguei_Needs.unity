@@ -84,9 +84,10 @@ GameObject:
   - 4: {fileID: 391527832}
   - 212: {fileID: 391527831}
   - 61: {fileID: 391527830}
+  - 114: {fileID: 391527833}
   m_Layer: 0
   m_Name: Victim
-  m_TagString: Untagged
+  m_TagString: Victim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +137,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &391527833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391527829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf4b8c8284ac4a8f8d2f898766c0534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  need: 3
+  itemType: 4
 --- !u!1 &502954297
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +246,7 @@ GameObject:
   - 61: {fileID: 1211823815}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,10 +308,12 @@ GameObject:
   - 50: {fileID: 2021143869}
   - 61: {fileID: 2021143868}
   - 114: {fileID: 2021143867}
+  - 114: {fileID: 2021143872}
   - 114: {fileID: 2021143866}
+  - 114: {fileID: 2021143873}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,11 +326,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2021143865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696dcfc41ab2347c8ab33394db43953b, type: 3}
+  m_Script: {fileID: 11500000, guid: 689256ede325a49e6bcfa9ebaafea5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VictimTag: 
-  detectionDistance: 1
 --- !u!114 &2021143867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,11 +357,11 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021143865}
-  m_Mass: 1
+  m_Mass: .300000012
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
+  m_GravityScale: 5
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -386,6 +400,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &2021143872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021143865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696dcfc41ab2347c8ab33394db43953b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VictimTag: Victim
+  detectionDistance: 5
+--- !u!114 &2021143873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021143865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc480fbcf2a6949e1896d61ec08841f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: 03000000
 --- !u!1 &2141489976
 GameObject:
   m_ObjectHideFlags: 0

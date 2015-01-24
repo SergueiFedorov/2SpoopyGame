@@ -31,7 +31,17 @@ public class CharacterItemController : MonoBehaviour {
 
 			}
 		}
+		//float axisValue = Input.GetAxisRaw ("Move_X");
 
+		//Debug.Log ("Value: " + axisValue);
+
+		/*
+		foreach (string name in Input.GetJoystickNames ())
+		{
+			Debug.Log(name);
+		}*/
+
+		/*
 		string output = "ME: ";
 		Debug.ClearDeveloperConsole ();
 		foreach (ItemTypes item in items)
@@ -44,7 +54,7 @@ public class CharacterItemController : MonoBehaviour {
 		if (victim != null)
 		{
 			Debug.Log ("VICTIM: " + victim.itemType);
-		}
+		}*/
 
 	}
 }

@@ -29,8 +29,6 @@ public class DistanceToVictims : MonoBehaviour {
 				VictimsCloseBy.Add(obj);
 			}
 		}
-
-		//Debug.Log (this.VictimsCloseBy.Count);
 	}
 
 	public Victim GetClosestVictim()
