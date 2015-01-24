@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
 
 
 		RaycastHit2D raycastHit = default(RaycastHit2D);
-		raycastHit = Physics2D.Raycast ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.5f), raycastDirection, 0.1f);
+		raycastHit = Physics2D.Raycast ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.5f), raycastDirection, 0.05f);
 		if (raycastHit.collider != null) 
 		{
 			if (Input.GetKeyDown(KeyCode.UpArrow))

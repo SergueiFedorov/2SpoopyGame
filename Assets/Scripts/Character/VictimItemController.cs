@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Victim : MonoBehaviour {
-
-	public VictimNeeds need;
-	public ItemTypes itemType;
+public class VictimItemController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
