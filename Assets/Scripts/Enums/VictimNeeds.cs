@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-enum VictimNeeds
+public enum VictimNeeds
 {
+	None,
 	Hunger,
 	Thirst,
 	Sick,

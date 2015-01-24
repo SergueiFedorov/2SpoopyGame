@@ -30,6 +30,16 @@ public class DistanceToVictims : MonoBehaviour {
 			}
 		}
 
-		Debug.Log (this.VictimsCloseBy.Count);
+		//Debug.Log (this.VictimsCloseBy.Count);
+	}
+
+	public Victim GetClosestVictim()
+	{
+		GameObject obj = this.VictimsCloseBy.OrderBy(x => Vector3.Distance(x.gameObject.transform.position, this.transform.position)).FirstOrDefault();
+		if (obj == null)
+		{
+			return null;
+		}
+		return obj.GetComponent<Victim> ();
 	}
 }
