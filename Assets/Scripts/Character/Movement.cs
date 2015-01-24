@@ -3,8 +3,11 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
+	Animator anim;
+
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator> ();
 		
 	}
 
@@ -24,13 +27,14 @@ public class Movement : MonoBehaviour {
 			//Debug.Log(raycastHit.collider.tag);
 			if (Input.GetButtonDown ("JUMP"))
 			{
-				this.rigidbody2D.AddForce(Vector2.up * jumpForce); 
+				this.rigidbody2D.AddForce(Vector2.up * jumpForce);
 			}
 		}
 
 		if (rigidbody2D.velocity.x < 10.0f && rigidbody2D.velocity.x > -10.0f)
 		{
 			rigidbody2D.AddForce(Vector2.right * Input.GetAxisRaw ("Move_X") * 10);
+			anim.SetFloat("speed", Mathf.Abs(rigidbody2D.velocity.x));
 		}
 
 		Debug.DrawRay ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.5f), raycastDirection * 0.05f, Color.red);
