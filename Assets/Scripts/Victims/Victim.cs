@@ -100,6 +100,11 @@ public class Victim : MonoBehaviour {
 		GameObject.Destroy(this.gameObject);
 	}
 
+	public void AutoKill()
+	{
+		healthBar.curhealth = 0.0f;
+	}
+
 	public bool CanTrade(ItemTypes item)
 	{
 		return item == need && this.IsActivated();

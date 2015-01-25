@@ -133,7 +133,7 @@ public class CharacterItemController : MonoBehaviour {
 				}
 				else
 				{
-					victim.Kill();
+					victim.AutoKill();
 				}
 			}
 		}

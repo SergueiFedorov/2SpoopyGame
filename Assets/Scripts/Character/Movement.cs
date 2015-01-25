@@ -77,7 +77,13 @@ public class Movement : MonoBehaviour {
 		this.transform.position = tempLocation;
 
 		anim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
+		if (Mathf.Abs (rigidbody2D.velocity.y) < 0.0001f) {
+			Vector2 temp = rigidbody2D.velocity;
+			temp.y = 0.0f;
+			rigidbody2D.velocity = temp;
+		}
 		anim.SetFloat ("verticleSpeed", Mathf.Abs(rigidbody2D.velocity.y));
+
 
 		if (dropTimer < 0)
 		{
