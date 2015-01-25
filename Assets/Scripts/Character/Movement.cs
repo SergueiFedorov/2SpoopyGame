@@ -16,8 +16,12 @@ public class Movement : MonoBehaviour {
 
 	float jumpForce = 400.0f;
 
+	int dropTimer = 0;
+
 	// Update is called once per frame
 	void FixedUpdate () {
+
+		dropTimer--;
 
 		RaycastHit2D raycastHit = default(RaycastHit2D);
 
@@ -47,13 +51,22 @@ public class Movement : MonoBehaviour {
 			rigidbody2D.AddForce(Vector2.right * Input.GetAxisRaw ("Move_X") * 10);
 		}
 
+		if (Input.GetButtonDown ("DROP"))
+		{
+			Physics2D.IgnoreLayerCollision( this.gameObject.layer, LayerMask.NameToLayer("platform"), true);
+			dropTimer = 20;
+
+		}
+
+		Debug.Log (dropTimer);
 
 		anim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
 		Debug.DrawRay ((Vector2)this.transform.position - (Vector2.up * this.collider2D.bounds.size.y * 0.5f), raycastDirection * 0.05f, Color.red);
 
-		Physics2D.IgnoreLayerCollision(this.gameObject.layer, LayerMask.NameToLayer("platform"), rigidbody2D.velocity.y > 0.0f);
-
-		//Debug.Log (this.gameObject.layer);
+		if (dropTimer < 0)
+		{
+			Physics2D.IgnoreLayerCollision(this.gameObject.layer, LayerMask.NameToLayer("platform"), rigidbody2D.velocity.y > 0.0f);
+		}
 	}
 
 	void OnCollisionExit2D(Collision2D collision) 

@@ -124,11 +124,10 @@ public class CharacterItemController : MonoBehaviour {
 					ItemTypes returnedItem = victim.DoTrade(items[buttonPressedIndex]);
 
 					items[buttonPressedIndex] = returnedItem;
-					/*
-					items.RemoveAt(buttonPressedIndex);
-					items.Add(returnedItem);*/
 
 					this.inventoryItemImage[buttonPressedIndex].sprite = this.GetSpriteForEnum(returnedItem);
+
+					victim.DeactivateFor(400);
 				}
 			}
 		}

@@ -84,7 +84,7 @@ public class NeedsController : MonoBehaviour {
 				
 		}
 
-		if (currentNeedBeingAsked != ItemTypes.None)
+		if (currentNeedBeingAsked != ItemTypes.None && victim.IsActivated())
 		{
 			if (victim.TryGesture(currentNeedBeingAsked))
 			{

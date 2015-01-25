@@ -16,12 +16,21 @@ public class Victim : MonoBehaviour {
 
 	int imageResponseTimer = - 1;
 
-	static int lastGeneratedRandomValue = 0;
+	int deactivateTimer = -1;
+	public void DeactivateFor(int time)
+	{
+		this.ResetVictimWithNewValues ();
+		this.deactivateTimer = time;
+	}
+
+	public bool IsActivated()
+	{
+		return this.deactivateTimer < 0;
+	}
 
 	private void ResetVictimWithNewValues()
 	{
 		int currentValue = Random.Range(1, (int)ItemTypes.MaxValue);
-		lastGeneratedRandomValue = currentValue;
 
 		itemType = (ItemTypes)(currentValue);
 		
@@ -29,6 +38,8 @@ public class Victim : MonoBehaviour {
 		{
 			need = (ItemTypes)Random.Range(1, (int)ItemTypes.MaxValue);
 		}
+
+		//Debug.Log (itemType + " " + need);
 	}
 
 	int resetTimer = -1;
@@ -55,6 +66,7 @@ public class Victim : MonoBehaviour {
 
 		resetTimer -= 1;
 		imageResponseTimer -= 1;
+		deactivateTimer -= 1;
 
 		if (imageResponseTimer < 0)
 		{
@@ -62,18 +74,19 @@ public class Victim : MonoBehaviour {
 			this.GetComponent<SpriteRenderer>().sprite = originalSprite;
 		}
 
-		/*
-		if (resetTimer < 0)
+		if (IsActivated() == false)
 		{
-			rende
-			showHiddenItem = false;
-			this.ResetVictimWithNewValues();
-		}*/
+			this.GetComponent<SpriteRenderer>().color = Color.gray;
+		}
+		else
+		{
+			this.GetComponent<SpriteRenderer>().color = Color.white;
+		}
 	}
 
 	public bool CanTrade(ItemTypes item)
 	{
-		return item == need;
+		return item == need && this.IsActivated();
 	}
 
 	public ItemTypes DoTrade(ItemTypes item)
