@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour {
 
 	void Start ()
 	{
-
+		PlayerPrefs.SetInt ("CurLives", 6);
 	}
 	void Update()
 	{

@@ -97,6 +97,12 @@ public class Victim : MonoBehaviour {
 
 	public void Kill()
 	{
+		int score = PlayerPrefs.GetInt ("CurLives");
+		score -= 1;
+		PlayerPrefs.SetInt ("CurLives", score);
+		if (score == 0) {
+			Application.LoadLevel("Scene");
+		}
 		GameObject.Destroy(this.gameObject);
 	}
 
