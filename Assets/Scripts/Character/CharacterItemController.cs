@@ -1,17 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
+
 
 public class CharacterItemController : MonoBehaviour {
 
-	public List<ItemTypes> items = new List<ItemTypes>();
+	private Sprite GetSpriteForEnum(ItemTypes types)
+	{
+		switch (types) 
+		{
+			case ItemTypes.Food:
+			{
+				return foodImg;
+			}
+			case ItemTypes.Cold:
+			{
+				return coldImg;
+			}
+			case ItemTypes.Water:
+			{
+				return waterImg;
+			}
+			case ItemTypes.Medicine:
+			{
+				return medImg;
+			}
+			default:
+			{
+				throw new UnityException("No image associated with " + types);
+			}
+		}
 
-	public List<UnityEngine.UI.Image> invimg = new List<UnityEngine.UI.Image>();
+		return null;
+	}
+	
+	public List<ItemTypes> items = new List<ItemTypes>();
+	public List<Image> inventoryItemImage = new List<Image>();
 
 	public Sprite foodImg;
 	public Sprite medImg;
 	public Sprite waterImg;
-	public Sprite toolImg;
+	public Sprite coldImg;
 	
 	DistanceToVictims distancesToVictims;
 	
@@ -19,42 +50,50 @@ public class CharacterItemController : MonoBehaviour {
 	void Start () {
 		distancesToVictims = this.GetComponent<DistanceToVictims> ();
 
-		foreach (UnityEngine.UI.Image i in invimg) {
-			i.enabled = false;
+		foreach (UnityEngine.UI.Image image in inventoryItemImage) {
+			image.enabled = false;
 		}
 
-		switch (items[0]) 
+		if (this.inventoryItemImage.Count != this.items.Count)
 		{
-		case ItemTypes.None:
-		{
-			break;
-		}
-		case ItemTypes.Food:
-		{
-			invimg[0].enabled = true;
-			invimg[0].sprite = foodImg;
-			break;
-		}
-		case ItemTypes.Cold:
-		{
-			invimg[0].enabled = true;
-			invimg[0].sprite = toolImg;
-			break;
-		}
-		case ItemTypes.Water:
-		{
-			invimg[0].enabled = true;
-			invimg[0].sprite = waterImg;
-			break;
-		}
-		case ItemTypes.Medicine:
-		{
-			invimg[0].enabled = true;
-			invimg[0].sprite = medImg;
-			break;
-		}
+			throw new UnityException("You have too many items. Not enough UI space.");
 		}
 
+		for (int x = 0; x < this.inventoryItemImage.Count; x++)
+		{
+			this.inventoryItemImage[x].enabled = true;
+			this.inventoryItemImage[x].sprite = GetSpriteForEnum(this.items[x]);
+		}
+	}
+
+	private static class JoystickStrings
+	{
+		public const string SQUARE = "JOYSTICK_SQUARE";
+		public const string CIRCLE = "JOYSTICK_CIRCLE";
+		public const string TRIANGLE = "JOYSTICK_TRIANGLE";
+	}
+
+	int TranslateJoystickToItemPosition(string joystickButtonString)
+	{
+		switch (joystickButtonString)
+		{
+			case JoystickStrings.CIRCLE:
+			{
+				return 0;
+			}
+			case JoystickStrings.SQUARE:
+			{
+				return 1;
+			}
+			case JoystickStrings.TRIANGLE:
+			{
+				return 2;
+			}
+			default:
+			{
+				throw new UnityException("There is no such button string defined");
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -64,51 +103,31 @@ public class CharacterItemController : MonoBehaviour {
 
 		if (victim != null)
 		{
-			if (Input.GetKeyDown(KeyCode.Alpha1) && items.Count > 0)
+			int buttonPressedIndex = -1;
+			if (Input.GetButtonDown(JoystickStrings.CIRCLE))
 			{
-				if (victim.CanTrade(items[0]))
-				{
-					ItemTypes returnedItem = victim.DoTrade(items[0]);
-					Debug.Log(returnedItem);
-					items.RemoveAt(0);
-					items.Add(returnedItem);
-					int invNum = items.Count - 1;
-					Mathf.Clamp(invNum, 0,3);
+				buttonPressedIndex = this.TranslateJoystickToItemPosition(JoystickStrings.CIRCLE);
+			}
+			else if (Input.GetButtonDown(JoystickStrings.SQUARE))
+			{
+				buttonPressedIndex = this.TranslateJoystickToItemPosition(JoystickStrings.SQUARE);
+			}
+			else if (Input.GetButtonDown(JoystickStrings.TRIANGLE))
+			{
+				buttonPressedIndex = this.TranslateJoystickToItemPosition(JoystickStrings.TRIANGLE);
+			}
 
-					switch (returnedItem) 
-					{
-					case ItemTypes.None:
-					{
-						break;
-					}
-					case ItemTypes.Food:
-					{
-						invimg[invNum].enabled = true;
-						invimg[invNum].sprite = foodImg;
-						break;
-					}
-					case ItemTypes.Cold:
-					{
-						invimg[invNum].enabled = true;
-						invimg[invNum].sprite = toolImg;
-						break;
-					}
-					case ItemTypes.Water:
-					{
-						invimg[invNum].enabled = true;
-						invimg[invNum].sprite = waterImg;
-						break;
-					}
-					case ItemTypes.Medicine:
-					{
-						invimg[invNum].enabled = true;
-						invimg[invNum].sprite = medImg;
-						break;
-					}
-					}
-				
+			if (buttonPressedIndex != -1)
+			{
+				if (victim.CanTrade(items[buttonPressedIndex]))
+				{
+					ItemTypes returnedItem = victim.DoTrade(items[buttonPressedIndex]);
+
+					items.RemoveAt(buttonPressedIndex);
+					items.Add(returnedItem);
+
+					this.inventoryItemImage[buttonPressedIndex].sprite = this.GetSpriteForEnum(returnedItem);
 				}
-		
 			}
 		}
 
