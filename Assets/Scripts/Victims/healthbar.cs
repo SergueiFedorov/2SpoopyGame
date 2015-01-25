@@ -25,7 +25,7 @@ public class Healthbar : MonoBehaviour {
 
 	public void ResetHealthToFull()
 	{
-		Debug.Log (curhealth);
+//		Debug.Log (curhealth);
 
 		curhealth = startHealth;
 	}

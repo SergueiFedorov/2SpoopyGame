@@ -17,8 +17,7 @@ public class Movement : MonoBehaviour {
 	float jumpForce = 400.0f;
 
 	// Update is called once per frame
-	void Update () {
-
+	void FixedUpdate () {
 
 		RaycastHit2D raycastHit = default(RaycastHit2D);
 
@@ -28,6 +27,7 @@ public class Movement : MonoBehaviour {
 			//Debug.Log(raycastHit.collider.tag);
 			if (Input.GetButtonDown ("JUMP") || Input.GetKeyDown(KeyCode.UpArrow))
 			{
+				Physics2D.IgnoreLayerCollision( this.gameObject.layer, LayerMask.NameToLayer("platform"), true);
 				this.rigidbody2D.AddForce(Vector2.up * jumpForce); 
 			}
 		}
