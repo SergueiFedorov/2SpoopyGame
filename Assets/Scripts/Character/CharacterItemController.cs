@@ -101,10 +101,6 @@ public class CharacterItemController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Debug.Log (JoystickStrings.SQUARE + " " + Input.GetButtonDown (JoystickStrings.SQUARE));
-		Debug.Log (JoystickStrings.CIRCLE + " " + Input.GetButtonDown (JoystickStrings.CIRCLE));
-		Debug.Log (JoystickStrings.TRIANGLE + " " + Input.GetButtonDown (JoystickStrings.TRIANGLE));
-
 		Victim victim = distancesToVictims.GetClosestVictim ();
 
 		if (victim != null)

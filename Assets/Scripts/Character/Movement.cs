@@ -55,9 +55,8 @@ public class Movement : MonoBehaviour {
 			rigidbody2D.AddForce(Vector2.right * Input.GetAxisRaw ("Move_X") * 10);
 		}
 
-		if (Input.GetButtonDown ("DROP") || Input.GetKeyDown(KeyCode.LeftShift))
+		if (Input.GetButtonDown ("DROP") || Input.GetKeyDown(KeyCode.LeftShift) && raycastHit.collider != null)
 		{
-			Debug.Log("here");
 			rigidbody2D.AddForce(Vector2.up * 150.0f);
 			dropTimer = 30;
 		}
