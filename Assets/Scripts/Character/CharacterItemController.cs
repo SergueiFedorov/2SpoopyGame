@@ -85,11 +85,11 @@ public class CharacterItemController : MonoBehaviour {
 			}
 			case JoystickStrings.SQUARE:
 			{
-				return 1;
+				return 0;
 			}
 			case JoystickStrings.TRIANGLE:
 			{
-				return 0;
+				return 1;
 			}
 			default:
 			{
@@ -137,7 +137,7 @@ public class CharacterItemController : MonoBehaviour {
 				}
 				else
 				{
-
+					victim.Kill();
 				}
 			}
 		}

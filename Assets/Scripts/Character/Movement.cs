@@ -6,6 +6,9 @@ public class Movement : MonoBehaviour {
 	// Use this for initialization
 	Animator anim;
 
+	public float minX;
+	public float maxX;
+
 	void Start () {
 
 		anim = GetComponent<Animator> ();
@@ -69,6 +72,10 @@ public class Movement : MonoBehaviour {
 		}
 
 //		Debug.Log (dropTimer);
+
+		Vector2 tempLocation = this.transform.position;
+		tempLocation.x = Mathf.Clamp (tempLocation.x, minX, maxX);
+		this.transform.position = tempLocation;
 
 		anim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
 		anim.SetFloat ("verticleSpeed", Mathf.Abs(rigidbody2D.velocity.y));
