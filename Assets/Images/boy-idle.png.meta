@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: 7d277ced129c64d37a7a019370d08b58
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boy-idle_0
+    21300002: boy-idle_1
+    21300004: boy-idle_2
+    21300006: boy-idle_3
+    21300008: boy-idle_4
+    21300010: boy-idle_5
+    21300012: boy-idle_6
+    21300014: boy-idle_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,23 +33,103 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 8
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: boy-idle_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 236
+        width: 66
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 236
+        width: 68
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 236
+        width: 66
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 236
+        width: 66
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 236
+        width: 68
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_5
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 236
+        width: 66
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_6
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 236
+        width: 66
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-idle_7
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 236
+        width: 65
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

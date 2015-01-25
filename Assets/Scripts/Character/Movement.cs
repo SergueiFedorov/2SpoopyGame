@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
 	void Start () {
 
 		anim = GetComponent<Animator> ();
-
+		originalScale = this.transform.localScale;
 	}
 
 	Vector2 raycastDirection = new Vector2(0.0f, -1.0f);
@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour {
 	float jumpForce = 400.0f;
 
 	int dropTimer = 0;
+
+	Vector2 originalScale;
 
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -57,9 +59,19 @@ public class Movement : MonoBehaviour {
 			dropTimer = 30;
 		}
 
+		if (rigidbody2D.velocity.x < -0.05f)
+		{
+			this.transform.localScale = new Vector2(originalScale.x * -1.0f, originalScale.y);
+		}
+		else if (rigidbody2D.velocity.x > 0.05f)
+		{
+			this.transform.localScale = originalScale;
+		}
+
 		Debug.Log (dropTimer);
 
 		anim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
+		anim.SetFloat ("verticleSpeed", Mathf.Abs(rigidbody2D.velocity.y));
 
 		if (dropTimer < 0)
 		{

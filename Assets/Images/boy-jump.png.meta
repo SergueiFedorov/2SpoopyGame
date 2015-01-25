@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 97d592415d691433f8a28f00058e5394
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boy-jump_0
+    21300002: boy-jump_1
+    21300004: boy-jump_2
+    21300006: boy-jump_3
+    21300008: boy-jump_4
+    21300010: boy-jump_5
+    21300012: boy-jump_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,23 +32,93 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 8
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: boy-jump_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 236
+        width: 75
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-jump_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 243
+        width: 66
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-jump_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 254
+        width: 63
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-jump_3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 255
+        width: 87
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-jump_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 251
+        width: 125
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-jump_5
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 244
+        width: 83
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-jump_6
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 235
+        width: 78
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
