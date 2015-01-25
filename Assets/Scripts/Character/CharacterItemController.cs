@@ -23,6 +23,37 @@ public class CharacterItemController : MonoBehaviour {
 			i.enabled = false;
 		}
 
+		switch (items[0]) 
+		{
+		case ItemTypes.None:
+		{
+			break;
+		}
+		case ItemTypes.Food:
+		{
+			invimg[0].enabled = true;
+			invimg[0].sprite = foodImg;
+			break;
+		}
+		case ItemTypes.Tools:
+		{
+			invimg[0].enabled = true;
+			invimg[0].sprite = toolImg;
+			break;
+		}
+		case ItemTypes.Water:
+		{
+			invimg[0].enabled = true;
+			invimg[0].sprite = waterImg;
+			break;
+		}
+		case ItemTypes.Medicine:
+		{
+			invimg[0].enabled = true;
+			invimg[0].sprite = medImg;
+			break;
+		}
+		}
 
 	}
 	

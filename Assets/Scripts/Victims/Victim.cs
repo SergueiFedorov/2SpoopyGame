@@ -4,7 +4,7 @@ using System.Collections;
 public class Victim : MonoBehaviour {
 
 	public ItemTypes need;
-	private ItemTypes itemType = ItemTypes.None;
+	private ItemTypes itemType = ItemTypes.Food;
 	bool gestureWasSuccesful = false;
 
 	Healthbar healthBar; 

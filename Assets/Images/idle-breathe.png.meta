@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 6
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -61,8 +61,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .561062038, y: .390960693}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_1
       rect:
@@ -71,8 +71,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .569785118, y: .390960693}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_2
       rect:
@@ -81,8 +81,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .526169538, y: .395322323}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_3
       rect:
@@ -91,8 +91,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .561061859, y: .395322323}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_4
       rect:
@@ -101,8 +101,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5523386, y: .390960693}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_5
       rect:
@@ -111,8 +111,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5261693, y: .399683833}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_6
       rect:
@@ -121,8 +121,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5523386, y: .395322323}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_7
       rect:
@@ -131,8 +131,8 @@ TextureImporter:
         y: 128
         width: 64
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .4738307, y: .395322323}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
