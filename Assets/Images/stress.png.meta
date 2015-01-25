@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 773419848966f6d4dbdd4f87f312a333
-=======
-guid: 436db50b8517d4f8aa8e946c8353a321
->>>>>>> 38733776223842564febb841f9133a84d40d0b3a
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: stress_0
+    21300002: stress_1
+    21300004: stress_2
+    21300006: stress_3
+    21300008: stress_4
+    21300010: stress_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +31,6 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-<<<<<<< HEAD
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -37,30 +38,76 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-=======
-    aniso: -1
-    mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
-  lightmap: 0
-  compressionQuality: 50
-  spriteMode: 0
->>>>>>> 38733776223842564febb841f9133a84d40d0b3a
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-<<<<<<< HEAD
+  spritePixelsToUnits: 5
   alphaIsTransparency: 1
   textureType: 8
-=======
-  alphaIsTransparency: 0
-  textureType: -1
->>>>>>> 38733776223842564febb841f9133a84d40d0b3a
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: stress_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 236
+        width: 87
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stress_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 236
+        width: 105
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stress_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 236
+        width: 116
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stress_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 236
+        width: 87
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stress_4
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 236
+        width: 70
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stress_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 236
+        width: 89
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

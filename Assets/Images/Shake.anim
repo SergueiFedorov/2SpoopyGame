@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle
+  m_Name: Shake
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -17,22 +17,20 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: -.142857149
-      value: {fileID: 21300000, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
     - time: 0
-      value: {fileID: 21300002, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300000, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     - time: .142857149
-      value: {fileID: 21300004, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300002, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     - time: .285714298
-      value: {fileID: 21300006, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300004, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     - time: .428571433
-      value: {fileID: 21300008, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300006, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     - time: .571428597
-      value: {fileID: 21300010, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300008, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     - time: .714285731
-      value: {fileID: 21300012, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300010, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     - time: .857142866
-      value: {fileID: 21300014, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+      value: {fileID: 21300012, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -51,14 +49,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300002, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300004, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300006, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300008, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300010, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300012, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
-    - {fileID: 21300014, guid: 7d277ced129c64d37a7a019370d08b58, type: 3}
+    - {fileID: 21300000, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
+    - {fileID: 21300002, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
+    - {fileID: 21300004, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
+    - {fileID: 21300006, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
+    - {fileID: 21300008, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
+    - {fileID: 21300010, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
+    - {fileID: 21300012, guid: 0eee302e6a7f8494493d734f048ea851, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
@@ -78,4 +75,11 @@ AnimationClip:
     m_Mirror: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []
-  m_Events: []
+  m_Events:
+  - time: 1
+    functionName: ResetStressed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

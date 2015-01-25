@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b190737f4287b994bb25e41b77f59c67
-=======
-guid: 1e968dc5f243445c3b96624b8dd0764d
->>>>>>> 38733776223842564febb841f9133a84d40d0b3a
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: nod_0
+    21300002: nod_1
+    21300004: nod_2
+    21300006: nod_3
+    21300008: nod_4
+    21300010: nod_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,39 +31,83 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-<<<<<<< HEAD
     aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-=======
-    aniso: -1
-    mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
-  lightmap: 0
-  compressionQuality: 50
-  spriteMode: 0
->>>>>>> 38733776223842564febb841f9133a84d40d0b3a
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< HEAD
-  spritePixelsToUnits: 4
+  spritePixelsToUnits: 5
   alphaIsTransparency: 1
   textureType: 8
-=======
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
->>>>>>> 38733776223842564febb841f9133a84d40d0b3a
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: nod_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 236
+        width: 68
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nod_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 236
+        width: 68
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nod_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 236
+        width: 90
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nod_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 236
+        width: 68
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nod_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 236
+        width: 68
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nod_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 236
+        width: 69
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

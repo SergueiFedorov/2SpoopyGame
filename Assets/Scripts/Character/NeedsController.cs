@@ -12,8 +12,12 @@ public class NeedsController : MonoBehaviour {
 
 	ItemTypes currentNeedBeingAsked;
 
+	Animator anim;
+
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator> ();
+
 		needBindingsKeyboard.Add (KeyCode.A, ItemTypes.Food);
 		needBindingsKeyboard.Add (KeyCode.S, ItemTypes.Medicine);
 		needBindingsKeyboard.Add (KeyCode.D, ItemTypes.Cold);
@@ -72,6 +76,7 @@ public class NeedsController : MonoBehaviour {
 			if (value < -0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_LEFT"];
+
 				Debug.Log (currentAxis);
 			}
 

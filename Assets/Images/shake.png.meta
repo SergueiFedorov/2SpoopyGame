@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: 0eee302e6a7f8494493d734f048ea851
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: shake_0
+    21300002: shake_1
+    21300004: shake_2
+    21300006: shake_3
+    21300008: shake_4
+    21300010: shake_5
+    21300012: shake_6
+    21300014: shake_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,23 +33,103 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 5
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: shake_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 236
+        width: 68
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 236
+        width: 73
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 236
+        width: 73
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_3
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 236
+        width: 71
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 236
+        width: 71
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 236
+        width: 74
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_6
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 236
+        width: 74
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shake_7
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 236
+        width: 68
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

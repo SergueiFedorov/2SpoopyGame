@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: a0b62eca53bd645e4909ac70cae42d92
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boy-thirst_0
+    21300002: boy-thirst_1
+    21300004: boy-thirst_2
+    21300006: boy-thirst_3
+    21300008: boy-thirst_4
+    21300010: boy-thirst_5
+    21300012: boy-thirst_6
+    21300014: boy-thirst_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,23 +33,103 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 8
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: boy-thirst_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 236
+        width: 68
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 236
+        width: 68
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 236
+        width: 74
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 236
+        width: 68
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_4
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 236
+        width: 68
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_5
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 236
+        width: 65
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_6
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 236
+        width: 63
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boy-thirst_7
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 236
+        width: 63
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour {
 			this.transform.localScale = originalScale;
 		}
 
-		Debug.Log (dropTimer);
+//		Debug.Log (dropTimer);
 
 		anim.SetFloat ("speed", Mathf.Abs(rigidbody2D.velocity.x));
 		anim.SetFloat ("verticleSpeed", Mathf.Abs(rigidbody2D.velocity.y));

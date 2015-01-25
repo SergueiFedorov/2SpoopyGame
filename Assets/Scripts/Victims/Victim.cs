@@ -17,6 +17,8 @@ public class Victim : MonoBehaviour {
 	int imageResponseTimer = - 1;
 
 	int deactivateTimer = -1;
+
+	Animator anim;
 	public void DeactivateFor(int time)
 	{
 		this.ResetVictimWithNewValues ();
@@ -46,6 +48,7 @@ public class Victim : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator> ();
 		this.healthBar = transform.Find ("VictimHealthBar").GetComponent<Healthbar> ();
 		this.originalSprite = this.GetComponent<SpriteRenderer> ().sprite;
 		this.ResetVictimWithNewValues ();
@@ -80,6 +83,7 @@ public class Victim : MonoBehaviour {
 		}
 		else
 		{
+			anim.SetBool("Stress", true);
 			this.GetComponent<SpriteRenderer>().color = Color.white;
 		}
 	}
@@ -91,6 +95,7 @@ public class Victim : MonoBehaviour {
 
 	public ItemTypes DoTrade(ItemTypes item)
 	{
+		anim.SetBool ("Success", true);
 		ItemTypes myItem = this.itemType;
 		this.itemType = item;
 
@@ -101,6 +106,7 @@ public class Victim : MonoBehaviour {
 
 	public void GesureFailed()
 	{
+		anim.SetBool("Reject",true);
 		this.GetComponent<SpriteRenderer> ().sprite = no;
 		imageResponseTimer = 100;
 
@@ -109,6 +115,7 @@ public class Victim : MonoBehaviour {
 
 	public void SetGestureSucceeded()
 	{
+		anim.SetBool("Agree", true);
 		showHiddenItem = true;
 
 		this.GetComponent<SpriteRenderer> ().sprite = yes;
@@ -120,5 +127,17 @@ public class Victim : MonoBehaviour {
 	public bool TryGesture(ItemTypes gestureForItem)
 	{
 		return this.need == gestureForItem;
+	}
+
+	void ResetStressed()
+	{
+		anim.SetBool ("Stress", false);
+		anim.SetBool ("Agree", false);
+		anim.SetBool ("Reject", false);
+	}
+
+	void SetIdle()
+	{
+		anim.SetBool ("Success", false);
 	}
 }

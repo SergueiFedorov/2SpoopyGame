@@ -45,6 +45,8 @@ public class CharacterItemController : MonoBehaviour {
 	public Sprite coldImg;
 	
 	DistanceToVictims distancesToVictims;
+
+	Animator anim;
 	
 	// Use this for initialization
 	void Start () {
