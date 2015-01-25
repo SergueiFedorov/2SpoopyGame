@@ -56,6 +56,13 @@ public class Victim : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (healthBar.curhealth <= 0.0f)
+		{
+			GameObject.Destroy(this.gameObject);
+
+			return;
+		}
+
 		if (showHiddenItem)
 		{
 			GameObject obj = transform.Find ("ItemTypeIndicator").gameObject;
@@ -86,6 +93,11 @@ public class Victim : MonoBehaviour {
 			anim.SetBool("Stress", true);
 			this.GetComponent<SpriteRenderer>().color = Color.white;
 		}
+	}
+
+	public void Kill()
+	{
+		this.healthBar.curhealth = 0.0f;
 	}
 
 	public bool CanTrade(ItemTypes item)

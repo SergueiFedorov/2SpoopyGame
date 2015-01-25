@@ -46,7 +46,7 @@ public class CharacterItemController : MonoBehaviour {
 	
 	DistanceToVictims distancesToVictims;
 
-	Animator anim;
+
 	
 	// Use this for initialization
 	void Start () {
@@ -85,11 +85,11 @@ public class CharacterItemController : MonoBehaviour {
 			}
 			case JoystickStrings.SQUARE:
 			{
-				return 0;
+				return 1;
 			}
 			case JoystickStrings.TRIANGLE:
 			{
-				return 1;
+				return 0;
 			}
 			default:
 			{
@@ -100,6 +100,10 @@ public class CharacterItemController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		Debug.Log (JoystickStrings.SQUARE + " " + Input.GetButtonDown (JoystickStrings.SQUARE));
+		Debug.Log (JoystickStrings.CIRCLE + " " + Input.GetButtonDown (JoystickStrings.CIRCLE));
+		Debug.Log (JoystickStrings.TRIANGLE + " " + Input.GetButtonDown (JoystickStrings.TRIANGLE));
 
 		Victim victim = distancesToVictims.GetClosestVictim ();
 
@@ -130,6 +134,10 @@ public class CharacterItemController : MonoBehaviour {
 					this.inventoryItemImage[buttonPressedIndex].sprite = this.GetSpriteForEnum(returnedItem);
 
 					victim.DeactivateFor(400);
+				}
+				else
+				{
+
 				}
 			}
 		}

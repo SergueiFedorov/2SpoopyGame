@@ -57,12 +57,14 @@ public class NeedsController : MonoBehaviour {
 
 			if (value > 0.1f)
 			{
-				currentAxis = needBindingsJoystick["DPAD_UP"];
+				currentAxis = needBindingsJoystick["DPAD_DOWN"];
+
 				Debug.Log (currentAxis);
 			}
 			if (value < -0.1f)
 			{
-				currentAxis = needBindingsJoystick["DPAD_DOWN"];
+				currentAxis = needBindingsJoystick["DPAD_UP"];
+				anim.SetTrigger("Eat");
 				Debug.Log (currentAxis);
 			}
 
@@ -71,12 +73,13 @@ public class NeedsController : MonoBehaviour {
 			if (value > 0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_RIGHT"];
+				anim.SetTrigger("Sick");
 				Debug.Log (currentAxis);
 			}
 			if (value < -0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_LEFT"];
-
+				anim.SetTrigger("Thirst");
 				Debug.Log (currentAxis);
 			}
 
