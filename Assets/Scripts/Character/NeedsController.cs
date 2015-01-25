@@ -47,72 +47,51 @@ public class NeedsController : MonoBehaviour {
 				}
 			}
 
-			//foreach (KeyValuePair<string, ItemTypes> binding in needBindingsJoystick) 
+			ItemTypes currentAxis = ItemTypes.None;
+
+			float value = Input.GetAxisRaw("DPAD_UP");
+
+			if (value > 0.1f)
 			{
-
-
-				//if (value > 0.1f || value < -0.1f)
-				{
-					ItemTypes currentAxis = ItemTypes.None;
-
-					float value = Input.GetAxisRaw("DPAD_UP");
-					//ItemTypes currentAxis = ItemTypes.None;
-
-					//if (binding.Key == "DPAD_UP")
-					{
-						if (value > 0.1f)
-						{
-							currentAxis = needBindingsJoystick["DPAD_UP"];
-						}
-						if (value < -0.1f)
-						{
-							currentAxis = needBindingsJoystick["DPAD_DOWN"];
-						}
-
-					}
-
-					value = Input.GetAxisRaw("DPAD_LEFT");
-
-					//if (binding.Key == "DPAD_LEFT")
-					{
-
-						if (value > 0.1f)
-						{
-							currentAxis = needBindingsJoystick["DPAD_RIGHT"];
-						}
-						if (value < -0.1f)
-						{
-							currentAxis = needBindingsJoystick["DPAD_LEFT"];
-						}
-					}
-
-					Debug.Log(lastJoystickAxis + " " + currentAxis);
-
-					if (lastJoystickAxis != currentAxis)
-					{
-						currentNeedBeingAsked = currentAxis;
-					}
-
-					lastJoystickAxis = currentAxis;
-				}
-				//else
-				{
-					//lastJoystickAxis = ItemTypes.None;
-				}
+				currentAxis = needBindingsJoystick["DPAD_UP"];
+			}
+			if (value < -0.1f)
+			{
+				currentAxis = needBindingsJoystick["DPAD_DOWN"];
 			}
 
-			if (currentNeedBeingAsked != ItemTypes.None)
+			value = Input.GetAxisRaw("DPAD_LEFT");
+
+			if (value > 0.1f)
 			{
-				if (victim.TryGesture(currentNeedBeingAsked))
-				{
-					victim.SetGestureSucceeded();
-				}
-				else
-				{
-					victim.GesureFailed();
-				}
+				currentAxis = needBindingsJoystick["DPAD_RIGHT"];
+			}
+			if (value < -0.1f)
+			{
+				currentAxis = needBindingsJoystick["DPAD_LEFT"];
+			}
+
+			if (lastJoystickAxis != currentAxis)
+			{
+				currentNeedBeingAsked = currentAxis;
+			}
+
+			lastJoystickAxis = currentAxis;
+				
+		}
+
+		if (currentNeedBeingAsked != ItemTypes.None)
+		{
+			if (victim.TryGesture(currentNeedBeingAsked))
+			{
+				victim.SetGestureSucceeded();
+			}
+			else
+			{
+				victim.GesureFailed();
 			}
 		}
+
 
 	}
 }
