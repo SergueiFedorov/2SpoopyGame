@@ -58,8 +58,8 @@ public class Victim : MonoBehaviour {
 	void Update () {
 		if (healthBar.curhealth <= 0.0f)
 		{
-			GameObject.Destroy(this.gameObject);
-
+			//GameObject.Destroy(this.gameObject);
+			anim.SetTrigger("Death");
 			return;
 		}
 
@@ -97,7 +97,7 @@ public class Victim : MonoBehaviour {
 
 	public void Kill()
 	{
-		this.healthBar.curhealth = 0.0f;
+		GameObject.Destroy(this.gameObject);
 	}
 
 	public bool CanTrade(ItemTypes item)

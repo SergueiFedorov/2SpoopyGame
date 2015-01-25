@@ -40,6 +40,8 @@ public class NeedsController : MonoBehaviour {
 
 		if (victim != null)
 		{
+
+
 			currentNeedBeingAsked = ItemTypes.None;
 
 			foreach (KeyValuePair<KeyCode, ItemTypes> binding in needBindingsKeyboard) 
@@ -58,10 +60,10 @@ public class NeedsController : MonoBehaviour {
 			if (value > 0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_DOWN"];
-
+				anim.SetTrigger("Cold");
 				Debug.Log (currentAxis);
 			}
-			if (value < -0.1f)
+			else if (value < -0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_UP"];
 				anim.SetTrigger("Eat");
@@ -76,7 +78,7 @@ public class NeedsController : MonoBehaviour {
 				anim.SetTrigger("Sick");
 				Debug.Log (currentAxis);
 			}
-			if (value < -0.1f)
+			else if (value < -0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_LEFT"];
 				anim.SetTrigger("Thirst");
