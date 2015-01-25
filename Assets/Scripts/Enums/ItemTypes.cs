@@ -5,8 +5,8 @@ public enum ItemTypes
 {
 	None = 0,
 	Food,
-	Water,
 	Medicine,
+	Water,
 	Cold,
 	MaxValue,
 }

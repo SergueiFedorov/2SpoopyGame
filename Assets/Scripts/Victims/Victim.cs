@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Net;
 
 public class Victim : MonoBehaviour {
 
@@ -15,17 +16,28 @@ public class Victim : MonoBehaviour {
 
 	int imageResponseTimer = - 1;
 
-	// Use this for initialization
-	void Start () {
-		healthBar = transform.Find ("VictimHealthBar").GetComponent<Healthbar> ();
-		itemType = (ItemTypes)Random.Range (1, (int)ItemTypes.MaxValue);
+	static int lastGeneratedRandomValue = 0;
 
+	private void ResetVictimWithNewValues()
+	{
+		int currentValue = Random.Range(1, (int)ItemTypes.MaxValue);
+		lastGeneratedRandomValue = currentValue;
+
+		itemType = (ItemTypes)(currentValue);
+		
 		while (itemType == need)
 		{
-			need = (ItemTypes)Random.Range (1, (int)ItemTypes.MaxValue);
+			need = (ItemTypes)Random.Range(1, (int)ItemTypes.MaxValue);
 		}
+	}
 
-		originalSprite = this.GetComponent<SpriteRenderer> ().sprite;
+	int resetTimer = -1;
+
+	// Use this for initialization
+	void Start () {
+		this.healthBar = transform.Find ("VictimHealthBar").GetComponent<Healthbar> ();
+		this.originalSprite = this.GetComponent<SpriteRenderer> ().sprite;
+		this.ResetVictimWithNewValues ();
 	}
 	
 	// Update is called once per frame
@@ -41,15 +53,22 @@ public class Victim : MonoBehaviour {
 			obj.GetComponent<VictimItemDisplay> ().SetItem (ItemTypes.None);
 		}
 
+		resetTimer -= 1;
 		imageResponseTimer -= 1;
-
-		//Debug.Log (imageResponseTimer);
 
 		if (imageResponseTimer < 0)
 		{
 			showHiddenItem = false;
 			this.GetComponent<SpriteRenderer>().sprite = originalSprite;
 		}
+
+		/*
+		if (resetTimer < 0)
+		{
+			rende
+			showHiddenItem = false;
+			this.ResetVictimWithNewValues();
+		}*/
 	}
 
 	public bool CanTrade(ItemTypes item)

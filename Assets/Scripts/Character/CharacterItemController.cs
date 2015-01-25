@@ -79,15 +79,15 @@ public class CharacterItemController : MonoBehaviour {
 		{
 			case JoystickStrings.CIRCLE:
 			{
-				return 0;
+				return 2;
 			}
 			case JoystickStrings.SQUARE:
 			{
-				return 1;
+				return 0;
 			}
 			case JoystickStrings.TRIANGLE:
 			{
-				return 2;
+				return 1;
 			}
 			default:
 			{
@@ -123,8 +123,10 @@ public class CharacterItemController : MonoBehaviour {
 				{
 					ItemTypes returnedItem = victim.DoTrade(items[buttonPressedIndex]);
 
+					items[buttonPressedIndex] = returnedItem;
+					/*
 					items.RemoveAt(buttonPressedIndex);
-					items.Add(returnedItem);
+					items.Add(returnedItem);*/
 
 					this.inventoryItemImage[buttonPressedIndex].sprite = this.GetSpriteForEnum(returnedItem);
 				}
