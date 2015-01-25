@@ -15,7 +15,7 @@ public class NeedsController : MonoBehaviour {
 	void Start () {
 		needBindings.Add (KeyCode.A, ItemTypes.Food);
 		needBindings.Add (KeyCode.S, ItemTypes.Medicine);
-		needBindings.Add (KeyCode.D, ItemTypes.Tools);
+		needBindings.Add (KeyCode.D, ItemTypes.Cold);
 		needBindings.Add (KeyCode.F, ItemTypes.Water);
 
 		distancesToVictims = this.GetComponent<DistanceToVictims> ();
