@@ -54,10 +54,12 @@ public class NeedsController : MonoBehaviour {
 			if (value > 0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_UP"];
+				Debug.Log (currentAxis);
 			}
 			if (value < -0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_DOWN"];
+				Debug.Log (currentAxis);
 			}
 
 			value = Input.GetAxisRaw("DPAD_LEFT");
@@ -65,10 +67,12 @@ public class NeedsController : MonoBehaviour {
 			if (value > 0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_RIGHT"];
+				Debug.Log (currentAxis);
 			}
 			if (value < -0.1f)
 			{
 				currentAxis = needBindingsJoystick["DPAD_LEFT"];
+				Debug.Log (currentAxis);
 			}
 
 			if (lastJoystickAxis != currentAxis)

@@ -20,7 +20,7 @@ public class Victim : MonoBehaviour {
 		healthBar = transform.Find ("VictimHealthBar").GetComponent<Healthbar> ();
 		itemType = (ItemTypes)Random.Range (1, (int)ItemTypes.MaxValue);
 
-		while (itemType != need)
+		while (itemType == need)
 		{
 			need = (ItemTypes)Random.Range (1, (int)ItemTypes.MaxValue);
 		}
