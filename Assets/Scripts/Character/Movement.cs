@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour {
 
 	Vector2 raycastDirection = new Vector2(0.0f, -1.0f);
 
-	float jumpForce = 200.0f;
+	float jumpForce = 400.0f;
 
 	// Update is called once per frame
 	void Update () {
@@ -53,6 +53,7 @@ public class Movement : MonoBehaviour {
 
 		Physics2D.IgnoreLayerCollision(this.gameObject.layer, LayerMask.NameToLayer("platform"), rigidbody2D.velocity.y > 0.0f);
 
+		Debug.Log (this.gameObject.layer);
 	}
 
 	void OnCollisionExit2D(Collision2D collision) 

@@ -35,7 +35,7 @@ public class CharacterItemController : MonoBehaviour {
 			invimg[0].sprite = foodImg;
 			break;
 		}
-		case ItemTypes.Tools:
+		case ItemTypes.Cold:
 		{
 			invimg[0].enabled = true;
 			invimg[0].sprite = toolImg;
@@ -87,7 +87,7 @@ public class CharacterItemController : MonoBehaviour {
 						invimg[invNum].sprite = foodImg;
 						break;
 					}
-					case ItemTypes.Tools:
+					case ItemTypes.Cold:
 					{
 						invimg[invNum].enabled = true;
 						invimg[invNum].sprite = toolImg;
