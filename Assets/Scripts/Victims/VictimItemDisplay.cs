@@ -5,6 +5,11 @@ public class VictimItemDisplay : MonoBehaviour {
 
 	ItemTypes currentItem = ItemTypes.None;
 
+	public Sprite MedicineIcon;
+	public Sprite WaterIcon;
+	public Sprite ColdIcon;
+	public Sprite FoodIcon;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +20,8 @@ public class VictimItemDisplay : MonoBehaviour {
 
 		SpriteRenderer renderer = this.GetComponent<SpriteRenderer> ();
 		renderer.enabled = true;
+
+		Debug.Log (currentItem);
 
 		//Todo change this to the enum values
 		//once the item types are set
@@ -27,22 +34,22 @@ public class VictimItemDisplay : MonoBehaviour {
 			}
 			case ItemTypes.Food:
 			{
-				renderer.color = Color.blue;
+				renderer.sprite = FoodIcon;
 				break;
 			}
-			case ItemTypes.Tools:
+			case ItemTypes.Cold:
 			{
-				renderer.color = Color.yellow;
+				renderer.sprite = ColdIcon;
 				break;
 			}
 			case ItemTypes.Water:
 			{
-				renderer.color = Color.green;
+				renderer.sprite = WaterIcon;
 				break;
 			}
 			case ItemTypes.Medicine:
 			{
-				renderer.color = Color.cyan;
+				renderer.sprite = MedicineIcon;	
 				break;
 			}
 		}

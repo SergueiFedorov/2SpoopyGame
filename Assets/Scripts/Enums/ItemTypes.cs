@@ -7,6 +7,6 @@ public enum ItemTypes
 	Food,
 	Water,
 	Medicine,
-	Tools,
+	Cold,
 	MaxValue,
 }
