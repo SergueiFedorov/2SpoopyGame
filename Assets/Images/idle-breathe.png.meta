@@ -35,7 +35,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 6
+  spritePixelsToUnits: 12
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -57,82 +57,82 @@ TextureImporter:
     - name: idle-breathe_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .561062038, y: .390960693}
+        x: 27
+        y: 256
+        width: 67
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .569785118, y: .390960693}
+        x: 160
+        y: 256
+        width: 65
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .526169538, y: .395322323}
+        x: 287
+        y: 256
+        width: 67
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .561061859, y: .395322323}
+        x: 422
+        y: 256
+        width: 66
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .5523386, y: .390960693}
+        x: 546
+        y: 255
+        width: 67
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_5
       rect:
         serializedVersion: 2
-        x: 320
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .5261693, y: .399683833}
+        x: 672
+        y: 256
+        width: 67
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .5523386, y: .395322323}
+        x: 801
+        y: 256
+        width: 67
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: idle-breathe_7
       rect:
         serializedVersion: 2
-        x: 448
-        y: 128
-        width: 64
-        height: 128
-      alignment: 9
-      pivot: {x: .4738307, y: .395322323}
+        x: 925
+        y: 256
+        width: 67
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
