@@ -21,7 +21,7 @@ public class VictimItemDisplay : MonoBehaviour {
 		SpriteRenderer renderer = this.GetComponent<SpriteRenderer> ();
 		renderer.enabled = true;
 
-		Debug.Log (currentItem);
+//		Debug.Log (currentItem);
 
 		//Todo change this to the enum values
 		//once the item types are set

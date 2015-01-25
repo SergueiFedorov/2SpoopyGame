@@ -38,7 +38,7 @@ public class Victim : MonoBehaviour {
 
 		imageResponseTimer -= 1;
 
-		Debug.Log (imageResponseTimer);
+		//Debug.Log (imageResponseTimer);
 
 		if (imageResponseTimer < 0)
 		{

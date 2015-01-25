@@ -545,7 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MedicineIcon: {fileID: 21300000, guid: 7c1f50814e65141468c64fe5d4670d12, type: 3}
   WaterIcon: {fileID: 21300000, guid: eeaed8919090e4449b80e99ce3d882f8, type: 3}
-  ColdIcon: {fileID: 21300000, guid: c0609c4070e9949d099300d07d8271d2, type: 3}
+  ColdIcon: {fileID: 21300000, guid: 9409984a132b9437485cd289be17164e, type: 3}
   FoodIcon: {fileID: 21300000, guid: fab2127f557194ac091dac177882f070, type: 3}
 --- !u!212 &1430698701
 SpriteRenderer:
